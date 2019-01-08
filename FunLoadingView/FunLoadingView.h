@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FunLoadingView : UIView
 
-@property (nonatomic, copy)NSString *loadImg;//图片
+@property (nonatomic, strong)UIImage *loadImg;//图片
 @property (nonatomic, copy)NSString *titleText;//文本
 @property (nonatomic, strong)UIFont *titleFont;//文本字体
 @property (nonatomic, strong)UIColor *titleColor;//文本颜色
