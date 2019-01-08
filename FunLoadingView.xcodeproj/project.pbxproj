@@ -13,6 +13,10 @@
 		21B8736E21E43EC800E04C1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21B8736D21E43EC800E04C1D /* Assets.xcassets */; };
 		21B8737121E43EC800E04C1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B8736F21E43EC800E04C1D /* LaunchScreen.storyboard */; };
 		21B8737421E43EC800E04C1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B8737321E43EC800E04C1D /* main.m */; };
+		21B8738021E43EEB00E04C1D /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B8737B21E43EEB00E04C1D /* FLAnimatedImage.m */; };
+		21B8738121E43EEB00E04C1D /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B8737C21E43EEB00E04C1D /* FLAnimatedImageView.m */; };
+		21B8738621E43F1900E04C1D /* FunLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B8738421E43F1900E04C1D /* FunLoadingView.m */; };
+		21B8738721E43F1900E04C1D /* FunLoading.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 21B8738521E43F1900E04C1D /* FunLoading.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,13 @@
 		21B8737021E43EC800E04C1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21B8737221E43EC800E04C1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21B8737321E43EC800E04C1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		21B8737B21E43EEB00E04C1D /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
+		21B8737C21E43EEB00E04C1D /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
+		21B8737D21E43EEB00E04C1D /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
+		21B8737E21E43EEB00E04C1D /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
+		21B8738321E43F1900E04C1D /* FunLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunLoadingView.h; sourceTree = "<group>"; };
+		21B8738421E43F1900E04C1D /* FunLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunLoadingView.m; sourceTree = "<group>"; };
+		21B8738521E43F1900E04C1D /* FunLoading.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FunLoading.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +69,14 @@
 		21B8736321E43EC800E04C1D /* FunLoadingView */ = {
 			isa = PBXGroup;
 			children = (
+				21B8737A21E43EEB00E04C1D /* FLAnimatedImage */,
 				21B8736421E43EC800E04C1D /* AppDelegate.h */,
 				21B8736521E43EC800E04C1D /* AppDelegate.m */,
 				21B8736721E43EC800E04C1D /* ViewController.h */,
 				21B8736821E43EC800E04C1D /* ViewController.m */,
+				21B8738321E43F1900E04C1D /* FunLoadingView.h */,
+				21B8738421E43F1900E04C1D /* FunLoadingView.m */,
+				21B8738521E43F1900E04C1D /* FunLoading.bundle */,
 				21B8736A21E43EC800E04C1D /* Main.storyboard */,
 				21B8736D21E43EC800E04C1D /* Assets.xcassets */,
 				21B8736F21E43EC800E04C1D /* LaunchScreen.storyboard */,
@@ -69,6 +84,17 @@
 				21B8737321E43EC800E04C1D /* main.m */,
 			);
 			path = FunLoadingView;
+			sourceTree = "<group>";
+		};
+		21B8737A21E43EEB00E04C1D /* FLAnimatedImage */ = {
+			isa = PBXGroup;
+			children = (
+				21B8737B21E43EEB00E04C1D /* FLAnimatedImage.m */,
+				21B8737C21E43EEB00E04C1D /* FLAnimatedImageView.m */,
+				21B8737D21E43EEB00E04C1D /* FLAnimatedImage.h */,
+				21B8737E21E43EEB00E04C1D /* FLAnimatedImageView.h */,
+			);
+			path = FLAnimatedImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +157,7 @@
 				21B8737121E43EC800E04C1D /* LaunchScreen.storyboard in Resources */,
 				21B8736E21E43EC800E04C1D /* Assets.xcassets in Resources */,
 				21B8736C21E43EC800E04C1D /* Main.storyboard in Resources */,
+				21B8738721E43F1900E04C1D /* FunLoading.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21B8738021E43EEB00E04C1D /* FLAnimatedImage.m in Sources */,
+				21B8738621E43F1900E04C1D /* FunLoadingView.m in Sources */,
 				21B8736921E43EC800E04C1D /* ViewController.m in Sources */,
+				21B8738121E43EEB00E04C1D /* FLAnimatedImageView.m in Sources */,
 				21B8737421E43EC800E04C1D /* main.m in Sources */,
 				21B8736621E43EC800E04C1D /* AppDelegate.m in Sources */,
 			);
@@ -220,7 +250,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -273,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -288,6 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VE7DDJ58L6;
 				INFOPLIST_FILE = FunLoadingView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VE7DDJ58L6;
 				INFOPLIST_FILE = FunLoadingView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
