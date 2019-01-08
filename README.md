@@ -14,7 +14,7 @@
  */
 + (void)showSuccessWithText:(NSString *__nullable)text view:(UIView *__nullable)view;
 ```
-####2.自定义加载
+#### 2.自定义加载
 
 
 ```
@@ -33,7 +33,7 @@
  */
 - (void)showViewAndHiddenIn:(CGFloat)delay onView:(UIView *)view;
 ```
-##二、系统指示器类型的loading
+## 二、系统指示器类型的loading
 
 
 ```
@@ -45,9 +45,9 @@
  */
 + (void)showIndicatorViewWithText:(NSString *__nullable)text onView:(UIView *)view;
 ```
-##三、GIF类型的loading
+## 三、GIF类型的loading
 
-####GIF资源可以根据实际需求替换bundle内部图片文件
+#### GIF资源可以根据实际需求替换bundle内部图片文件
 ```
 /**
  显示一个GIF动图的框（图片如需替换，可以直接修改原GIF图资源）
