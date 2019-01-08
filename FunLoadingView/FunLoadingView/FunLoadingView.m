@@ -99,8 +99,7 @@
 
 - (NSData *)imageData {
     if (!_imageData) {
-//        NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"FunLoading" ofType:@"bundle"]];
-        NSBundle *bundle = [FunLoadingView bundleWithBundleName:@"FunLoading" podName:nil];
+        NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"FunLoading" ofType:@"bundle"]];
         NSString *path = [bundle pathForResource:@"loading4" ofType:@"gif"];
         _imageData = [NSData dataWithContentsOfFile:path];
     }
@@ -138,18 +137,12 @@
 #pragma mark -- 显示各种视图
 
 + (void)showSuccessWithText:(NSString *)text view:(UIView *)view{
-    NSBundle *bundle = [FunLoadingView bundleWithBundleName:@"FunLoading" podName:nil];
-    NSString *path = [bundle pathForResource:@"success@2x" ofType:@"png"];
-    UIImage *image = [UIImage imageWithContentsOfFile:path];
-
-    [self showTextWithText:text icon:image view:view];
+    [self showTextWithText:text icon:[UIImage imageNamed:[NSString stringWithFormat:@"FunLoading.bundle/%@",@"success"]] view:view];
 }
 
 + (void)showErrorWithText:(NSString *)text view:(UIView *)view{
-    NSBundle *bundle = [FunLoadingView bundleWithBundleName:@"FunLoading" podName:nil];
-    NSString *path = [bundle pathForResource:@"error@2x" ofType:@"png"];
-    UIImage *image = [UIImage imageWithContentsOfFile:path];
-    [self showTextWithText:text icon:image view:view];
+    
+    [self showTextWithText:text icon:[UIImage imageNamed:[NSString stringWithFormat:@"FunLoading.bundle/%@",@"error"]] view:view];
 }
 
 - (void)showViewAndHiddenIn:(CGFloat)delay onView:(UIView *)view{
@@ -227,51 +220,6 @@
     }
     [self setNeedsLayout];
     [self setNeedsDisplay];
-}
-/*
-- (void)updateSubViewsOffSet:(CGFloat)viewOffSetY{
-    for (UIView *subView in self.subviews) {
-        if ([subView isKindOfClass:[UILabel class]]) {
-            CGRect lableFrame = self.titleLable.frame;
-            lableFrame.origin.y += viewOffSetY;
-            self.titleLable.frame = lableFrame;
-        }else{
-            CGRect subFrame = subView.frame;
-            subFrame.origin.y += viewOffSetY;
-            subView.frame = subFrame;
-        }
-    }
-}
-*/
-#pragma mark -- 后去获取bundle里面的z图片资源
-
-+ (NSBundle *)bundleWithBundleName:(NSString *)bundleName podName:(NSString *)podName{
-    if (bundleName == nil && podName == nil) {
-        @throw @"bundleName和podName不能同时为空";
-    }else if (bundleName == nil ) {
-        bundleName = podName;
-    }else if (podName == nil) {
-        podName = bundleName;
-    }
-    
-    
-    if ([bundleName containsString:@".bundle"]) {
-        bundleName = [bundleName componentsSeparatedByString:@".bundle"].firstObject;
-    }
-    //没使用framwork的情况下
-    NSURL *associateBundleURL = [[NSBundle mainBundle] URLForResource:bundleName withExtension:@"bundle"];
-    //使用framework形式
-    if (!associateBundleURL) {
-        associateBundleURL = [[NSBundle mainBundle] URLForResource:@"Frameworks" withExtension:nil];
-        associateBundleURL = [associateBundleURL URLByAppendingPathComponent:podName];
-        associateBundleURL = [associateBundleURL URLByAppendingPathExtension:@"framework"];
-        NSBundle *associateBunle = [NSBundle bundleWithURL:associateBundleURL];
-        associateBundleURL = [associateBunle URLForResource:bundleName withExtension:@"bundle"];
-    }
-    
-    NSAssert(associateBundleURL, @"取不到关联bundle");
-    //生产环境直接返回空
-    return associateBundleURL?[NSBundle bundleWithURL:associateBundleURL]:nil;
 }
 
 #pragma mark -- dealloc
