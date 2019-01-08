@@ -1,6 +1,8 @@
 # FunLoading
 加载等待视图。对MBProgressHUD的简化版本，同时增加GIF图片loading的功能。
 
+![gif5新文件.gif](https://upload-images.jianshu.io/upload_images/1933679-c6faafd526de869c.gif?imageMogr2/auto-orient/strip)
+
 ##一、静态图片+文字
 默认成功、失败两种图片。并延时2秒自动消失。
 #### 1.简化加载
@@ -56,6 +58,17 @@
  @param text 文本。文本也可直接设计在GIF每一帧，此时text为nil即可
  */
 + (void)showGIFLoadingOnView:(UIView *__nullable)view text:(NSString *)text;
+```
+
+## 四、隐藏所有视图（指示器类型、GIF类型都调用此方法）
+
+```
+/**
+ 隐藏现有提示视图
+
+ @param view 包含该视图的父视图
+ */
++ (void)hiddenCurrentShowedOnView:(UIView *__nullable)view;
 ```
 
 
